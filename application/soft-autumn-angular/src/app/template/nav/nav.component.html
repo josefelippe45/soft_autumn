@@ -1,0 +1,27 @@
+<!-- adicionando a navegação lateral da aplicação 
+    esse arquivo é composto de diversos componentes providos pelo agular material
+    facilitando a estilização e deixando o app responsivel.
+-->
+<mat-sidenav-container class="container">
+    <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="70">
+        <mat-nav-list>
+            <a mat-list-item routerLink="/">
+                <i class="material-icons">
+                    home
+                </i>
+                Home
+            </a>
+            <a mat-list-item routerLink="/produto/create">
+                <i class="material-icons">
+                    add_circle
+                </i>
+                Cadastrar
+            </a>
+            
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="content">
+        <!--emite um evento activate quando chamamos um componente-->
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

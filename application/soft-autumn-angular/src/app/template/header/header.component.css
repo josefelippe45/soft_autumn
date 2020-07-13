@@ -1,0 +1,27 @@
+/* adicionando estilos com flexbox.*/
+
+.header {
+    display: flex;
+    align-items: center;
+  
+}
+/*essa classe estiliza o link gerado no nosso header*/
+.header a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+}
+ 
+.header .logo {
+    max-height: 60px;
+}
+ 
+.header .title-group {
+    padding-left: 15px;
+   
+}
+ 
+.header .title-group i {
+    padding-right: 15px;
+}

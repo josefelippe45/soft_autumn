@@ -1,0 +1,29 @@
+<!--utilizando um card provido pelo angular material-->
+<mat-card>
+    <mat-card-title>Cadastrar Produto</mat-card-title>
+    <form>
+        <!--aqui estão os campos do nosso create utlizando o mat-form-field para controle e estilização-->
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]=produto.nome name="nome" required>
+        </mat-form-field>
+        <!--o campo preço por ser um pouco delicado precisa de um tipo e de um padrão especifico, 
+            para que o usuario n insira valores incompativeis-->
+        <mat-form-field>
+            <input type="number"matInput placeholder="Preço R$" [(ngModel)]=produto.preco name="preco" pattern="^\d+\.\d{2}$" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Descrição" [(ngModel)]=produto.descricao name="descricao" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Quantidade" [(ngModel)]=produto.quantidade name="quantidade" required>
+        </mat-form-field>
+    </form>
+    <!--os dois botões executam os metodos definidos no nosso componente-->
+    <button mat-raised-button (click)="createProduto()" color="primary">
+        Salvar
+    </button>
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+
+</mat-card>

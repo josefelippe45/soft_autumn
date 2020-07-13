@@ -1,0 +1,55 @@
+<!--o produto-read irá trazer uma lista na nossa pagina home-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="text">Items cadastrados</h1>
+    <!--tabela de dados-->
+    <div class="container" >
+        <table class="table">
+            <thead>
+                <tr>
+                    <!--colunas-->
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Descrição</th>
+                    <th>Quantidade</th>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                <!-- o for é responsavel pro criar um laço e trazer os dados do component-->
+                <tr *ngFor="let produto of produtos">
+                    <!--rows da nossa tabela-->
+                    <td>{{produto.nome}}</td>
+                    <td>{{produto.preco}}</td>
+                    <td>{{produto.descricao}}</td>
+                    <td>{{produto.quantidade}}</td>
+                    <td>
+                        <!--os dois botões utilizam o routerLink para navegar. eles carregam o id para que seja carregado o item certo-->
+                        <button class="button" mat-raised-button color="primary">
+                            <a [routerLink]="['/produto/update', produto.id]">
+                             
+                                Editar
+                            </a>
+                        </button>
+                        <button class="button"mat-raised-button color="warn">
+                            <a [routerLink]="['/produto/delete', produto.id]">
+                                Deletar
+                            </a>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

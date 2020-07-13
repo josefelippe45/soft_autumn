@@ -1,0 +1,18 @@
+/** adicionando estilos a nossa barra lateral e começando a definir uma paleta de cores*/
+.sidenav {
+    background-color: #4a148c;
+    width: 150px;
+}
+/** #ff6f00*/
+.sidenav a {
+    color: #FFF; 
+}
+ 
+.sidenav i {
+    padding-right: 10px;
+}
+ 
+.content {
+    padding: 15px;
+    background-color: #FFF;
+}
