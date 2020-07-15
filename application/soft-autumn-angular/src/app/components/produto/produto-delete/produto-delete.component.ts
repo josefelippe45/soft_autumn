@@ -35,7 +35,7 @@ export class ProdutoDeleteComponent implements OnInit {
     //executa o metodo do service utilizando o parametro pego na const produto
     this.service.deleteProduto(produto).then(() =>{
       this.getProdutos();
-      alert('Produto deletado!');
+      this.service.showMessage('Produto Deletado!');
       this.router.navigate(['/']);
     })
     

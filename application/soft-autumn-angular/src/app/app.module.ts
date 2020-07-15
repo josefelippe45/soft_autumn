@@ -25,6 +25,8 @@ import { MatListModule } from "@angular/material/list";
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 import { ProdutoCreateComponent } from './components/produto/produto-create/produto-create.component';
 import { ProdutoReadComponent } from './components/produto/produto-read/produto-read.component';
 import { ProdutoUpdateComponent } from './components/produto/produto-update/produto-update.component';
@@ -58,7 +60,8 @@ import { ProdutoDeleteComponent } from './components/produto/produto-delete/prod
     MatButtonModule,
     MatFormFieldModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
+    MatSnackBarModule
 
    
   ],

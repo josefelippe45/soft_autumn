@@ -25,7 +25,7 @@ export class ProdutoCreateComponent implements OnInit {
   //adicionando métodos do nosso componente
   //o metodo cancel retorna para pagina anterior.
   cancel(): void {
-    this.router.navigate(['/'])
+    this.router.navigate(['/']);
   }
   //o metodo getProdutos é responsavel por pegar os dados do nosso servidor
   private getProdutos() {
@@ -54,8 +54,15 @@ export class ProdutoCreateComponent implements OnInit {
       descricao: this.produto.descricao,
       quantidade: this.produto.quantidade,
     };
-    this.service.createProduto(produto);
-    this.getProdutos();
+    
+    this.service.createProduto(produto).then(() => {
+      this.getProdutos();
+      this.service.showMessage('Produto Cadastrado!');
+      this.router.navigate(['/']);
+    });
+
+
+
   }
 }
 

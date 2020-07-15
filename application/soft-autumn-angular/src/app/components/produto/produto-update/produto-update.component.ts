@@ -68,6 +68,7 @@ export class ProdutoUpdateComponent implements OnInit {
     //executa o metodo definido no nosso serviço e retorna um request get dos produtos
     this.service.updateProduto(produto).then(() => {
       this.getProdutos();
+      this.service.showMessage('Produto Alterado!');
       this.router.navigate(['/']);
     });
 

@@ -12,7 +12,7 @@
 <body>
     <h1 class="text">Items cadastrados</h1>
     <!--tabela de dados-->
-    <div class="container" >
+    <div class="container">
         <table class="table">
             <thead>
                 <tr>
@@ -21,7 +21,7 @@
                     <th>Preço</th>
                     <th>Descrição</th>
                     <th>Quantidade</th>
-                  
+
                 </tr>
             </thead>
             <tbody>
@@ -36,11 +36,11 @@
                         <!--os dois botões utilizam o routerLink para navegar. eles carregam o id para que seja carregado o item certo-->
                         <button class="button" mat-raised-button color="primary">
                             <a [routerLink]="['/produto/update', produto.id]">
-                             
+
                                 Editar
                             </a>
                         </button>
-                        <button class="button"mat-raised-button color="warn">
+                        <button class="button" mat-raised-button color="warn">
                             <a [routerLink]="['/produto/delete', produto.id]">
                                 Deletar
                             </a>

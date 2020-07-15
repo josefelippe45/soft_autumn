@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
+import { MatSnackBar} from "@angular/material/snack-bar";
 
 //essa const recebe a url do nosso servidor
 const baseUrl = 'http://localhost:8080/products/';
@@ -10,7 +11,15 @@ const baseUrl = 'http://localhost:8080/products/';
 export class ServicoService {
 
   //adicionamos o http client ao nosso contrutor pois ele sera de grande ajuda nos request.
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,private snackBar: MatSnackBar) { }
+  showMessage(msg: string): void {
+    this.snackBar.open(msg, "X" ,{
+      duration: 3000,
+      horizontalPosition: "right",
+      verticalPosition: "top",
+      panelClass: ['msg-success']
+    })
+  }
  //usado para testar com retorno json. auxilia no debug.
  httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
